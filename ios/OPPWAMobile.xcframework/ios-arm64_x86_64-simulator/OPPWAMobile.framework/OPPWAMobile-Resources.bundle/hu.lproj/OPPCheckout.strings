@@ -7,9 +7,7 @@
 "VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Fizetési mód kiválasztása";
 "VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Fizetés részletei";
 "VIEW_CONTROLLER_TITLE_PROCESSING" = "Feldolgozás";
-
-/// Form titles
-"FORM_TITLE_PAYMENT_INFO" = "Fizetési információ";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "számlázási cím";
 
 /// Labels
 "LABEL_TOTAL_AMOUNT" = "Teljes összeg";
@@ -55,7 +53,11 @@
 "FIELD_LABEL_COUNTRY_CODE" = "Ország kódja";
 "FIELD_LABEL_NATIONAL_IDENTIFIER" = "Országazonosító szám";
 "FIELD_LABEL_ACCOUNT_NUMBER" = "Számlaszám";
+"FIELD_LABEL_ROUTING_NUMBER" = "Számok feltérképezése";
 "FIELD_LABEL_ACCOUNT_VERIFICATION" = "Fiókellenőrzés";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Születési dátum";
+"FIELD_LABEL_OTP" = "Írja be a kódot a banki alkalmazásból";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Kérjük, adja meg Blik kódját";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "A kártyán szereplő név";
@@ -73,6 +75,15 @@
 "FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "Országazonosító szám";
 "FIELD_PLACEHOLDER_ACCOUNT_NUMBER" = "Számlaszám";
 "FIELD_PLACEHOLDER_ACCOUNT_VERIFICATION" = "Fiókellenőrzés";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "NN.HH.YYYY";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(opcionális)";
+"FIELD_PLACEHOLDER_COUNTRY" = "Ország";
+"FIELD_PLACEHOLDER_STATE" = "Állapot";
+"FIELD_PLACEHOLDER_CITY" = "Város";
+"FIELD_PLACEHOLDER_POSTCODE" = "Irányítószám";
+"FIELD_PLACEHOLDER_STREET1" = "Cím 1. sor";
+"FIELD_PLACEHOLDER_STREET2" = "Cím 2. sor";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Számok feltérképezése";
 
 /// Text field errors
 "FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "A bankkártya tulajdonosának neve érvénytelen";
@@ -89,8 +100,13 @@
 "FIELD_ERROR_MOBILE_PHONE_INVALID" = "Érvénytelen mobiltelefonszám";
 "FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "Érvénytelen azonosító";
 "FIELD_ERROR_ACCOUNT_NUMBER_INVALID" = "Érvénytelen számlaszám";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "Az útválasztási szám nem érvényes";
 "FIELD_ERROR_ACCOUNT_EXPIRY_DATE_INVALID" = "A lejárati dátum érvénytelen, használd a HH/ÉÉ vagy HH/ÉÉÉÉ formátumot";
 "FIELD_ERROR_ACCOUNT_EXPIRED" = "A fiók lejárt";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Érvénytelen születési dátum. DD.MM.YYYY várható";
+"FIELD_ERROR_ADDRESS_INVALID" = "Kattintson ide a számlázási címért";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Érvénytelen országkód";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Írjon be egy 6 számjegyű érvényes kódot";
 
 /// Payment method groups are displayed if tokens are received
 "PAYMENT_METHOD_GROUP_STORED" = "Mentett fizetési módok";
@@ -100,3 +116,20 @@
 /// Payment method names
 "PAYMENT_METHOD_TYPE_DIRECTDEBIT_SEPA" = "SEPA megbízás ";
 "PAYMENT_METHOD_TYPE_SOFORTUEBERWEISUNG" = "SOFORT Banking";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Használjon HH/ÉÉ formátumot";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Használjon 3 vagy 4 számjegyű kódot";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "A kártya lejárati dátuma nem érvényes, használjon HH/ÉÉ formátumot";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "A biztonsági kódnak 3 vagy 4 számjegyből kell állnia";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Olvass be egy kártyát";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "A fizetés megszakítása";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Fizessen a tárolt fizetési móddal:";
+"ACCESSIBILITY_PAY_WITH" = "Fizessen ezzel";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "A kártya beolvasása nem sikerült";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Tartsa itt a kártyát.\és automatikusan beolvassa";
+"BUTTON_TITLE_OK" = "rendben";

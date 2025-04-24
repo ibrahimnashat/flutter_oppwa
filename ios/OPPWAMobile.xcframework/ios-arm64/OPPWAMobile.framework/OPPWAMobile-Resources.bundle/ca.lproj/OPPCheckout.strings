@@ -7,9 +7,7 @@
 "VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Selecciona el mètode de pagament";
 "VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Dades del pagament";
 "VIEW_CONTROLLER_TITLE_PROCESSING" = "S'està processant";
-
-/// Form titles
-"FORM_TITLE_PAYMENT_INFO" = "Informació del pagament";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "Adreça de facturació";
 
 /// Labels
 "LABEL_TOTAL_AMOUNT" = "Quantitat total";
@@ -52,6 +50,10 @@
 "FIELD_LABEL_EMAIL" = "Correu electrònic";
 "FIELD_LABEL_COUNTRY_CODE" = "Codi del país";
 "FIELD_LABEL_NATIONAL_IDENTIFIER" = "Identificador nacional";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Data de naixement";
+"FIELD_LABEL_OTP" = "Introduïu el codi de la vostra aplicació bancària";
+"FIELD_LABEL_ROUTING_NUMBER" = "Nombre de ruta";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Introduïu el vostre codi Blik";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Nom tal i com apareix a la targeta";
@@ -65,6 +67,15 @@
 "FIELD_PLACEHOLDER_BIC_OR_BANK_CODE" = "BIC o codi del banc";
 "FIELD_PLACEHOLDER_EMAIL" = "Correu electrònic";
 "FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "Identificador nacional";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "DD.MM.AAAA";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(Opcional)";
+"FIELD_PLACEHOLDER_COUNTRY" = "País";
+"FIELD_PLACEHOLDER_STATE" = "Estat";
+"FIELD_PLACEHOLDER_CITY" = "ciutat";
+"FIELD_PLACEHOLDER_POSTCODE" = "Postal/Codi Postal";
+"FIELD_PLACEHOLDER_STREET1" = "Adreça Línia 1";
+"FIELD_PLACEHOLDER_STREET2" = "Adreça Línia 2";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Nombre de ruta";
 
 /// Text field errors
 "FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "El nom del titular de la targeta no és vàlid";
@@ -80,6 +91,11 @@
 "FIELD_ERROR_EMAIL_INVALID" = "El correu electrònic no és vàlid";
 "FIELD_ERROR_MOBILE_PHONE_INVALID" = "El número de mòbil no és vàlid";
 "FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "L'identificador nacional no és vàlid";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Data de naixement no vàlida. S'esperava el DD.MM.AAAA";
+"FIELD_ERROR_ADDRESS_INVALID" = "Feu clic aquí per veure l'adreça de facturació";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Codi de país no vàlid";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "El número d\'itinerari no és vàlid";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Introduïu un codi vàlid de 6 dígits";
 
 /// Payment method groups are displayed if tokens are received
 "PAYMENT_METHOD_GROUP_STORED" = "Mètodes de pagament emmagatzemats";
@@ -88,3 +104,20 @@
 
 /// Payment method names
 "PAYMENT_METHOD_TYPE_DIRECTDEBIT_SEPA" = "Domiciliació de dèbit directe SEPA";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Utilitzeu el format MM/AA";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Utilitzeu un codi de 3 o 4 dígits";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "La data de caducitat de la targeta no és vàlida, utilitzeu el format MM/AA";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "El codi de seguretat ha de contenir 3 o 4 dígits";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Escaneja una targeta";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "Cancel·la la compra";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Paga amb la forma de pagament emmagatzemada";
+"ACCESSIBILITY_PAY_WITH" = "Paga amb";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "No s'ha pogut escanejar la targeta";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Mantingueu la targeta aquí.\i escanejarà automàticament";
+"BUTTON_TITLE_OK" = "D'acord";
