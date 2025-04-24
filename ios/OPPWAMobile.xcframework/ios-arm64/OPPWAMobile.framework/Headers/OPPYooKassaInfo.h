@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 @import Foundation;
 
@@ -74,6 +65,9 @@ typedef NS_ENUM(NSInteger, OPPYooKassaStatus) {
 
 /// The URL string to notify backend about payment completion.
 @property (nonatomic, copy, readonly, nullable) NSString *callbackUrl;
+
+/// :nodoc:
++ (OPPYooKassaStatus)statusFromString:(nonnull NSString *)statusString;
 
 @end
 

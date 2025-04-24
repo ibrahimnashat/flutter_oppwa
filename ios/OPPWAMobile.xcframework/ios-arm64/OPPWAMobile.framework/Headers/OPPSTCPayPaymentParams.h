@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 #import "OPPPaymentParams.h"
 
@@ -28,8 +19,8 @@ typedef NS_ENUM(NSInteger, OPPSTCPayVerificationOption) {
 /// @name Initialization
 
 /// :nodoc:
-- (instancetype)initWithCheckoutID:(NSString *)checkoutID
-                      paymentBrand:(NSString *)paymentBrand
+- (nullable instancetype)initWithCheckoutID:(NSString *)checkoutID
+                      paymentBrand:(nullable NSString *)paymentBrand
                              error:(NSError * _Nullable __autoreleasing *)error NS_UNAVAILABLE;
 
 /**
@@ -42,7 +33,7 @@ Creates an object representing an STC Pay transaction.
 */
 + (nullable instancetype)stcPayPaymentParamsWithCheckoutID:(NSString *)checkoutID
                                         verificationOption:(OPPSTCPayVerificationOption)verificationOption
-                                                     error:(NSError **)error;
+                                                     error:(NSError * _Nullable __autoreleasing *)error;
 
 
 /**

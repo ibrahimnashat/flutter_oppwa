@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 #import <Foundation/Foundation.h>
 
@@ -19,6 +10,8 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
     OPPErrorCodePaymentParamsCheckoutIDInvalid = 1010,
     /// Brand doesn't match payment params class.
     OPPErrorCodePaymentParamsBrandInvalid = 1011,
+    /// Device authentication check failed
+    OPPErrorCodeDeviceAuthenticationCheckFailed = 1012,
     /// The token identifier is invalid. Must be alpha-numeric string of length 32.
     OPPErrorCodePaymentParamsTokenIDInvalid = 1090,
     /// Tokenization is not supported for chosen payment brand.
@@ -53,10 +46,18 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
     OPPErrorCodeBankAccountBankCodeInvalid = 1135,
     /// The account number of the bank account is invalid.
     OPPErrorCodeBankAccountNumberInvalid = 1136,
-    
+    /// The routing number of the bank account is invalid.
+    OPPErrorCodeBankAccountRoutingNumberInvalid = 1137,
+
     /// The Apple Pay payment token data is invalid. To perform this type of transaction a valid payment token data is needed.
-    OPPErrorCodeApplePayTokenDataInvalid = 1150,
-    
+    OPPErrorCodeApplePayTokenDataInvalid = 1150,    
+    /// The Apple Pay authorization rejected by merchant.
+    OPPErrorCodeApplePayAuthorizationDeclined = 1151,
+    /// Unable to submit Apple pay request
+    OPPErrorCodeApplePayRequestSubmitionFailed = 1152,
+    /// Unable to submit Apple pay recurring request
+    OPPErrorCodeApplePayRecurringRequestSubmitionFailed = 1153,
+
     /// The phone number is not valid.
     OPPErrorCodePhoneNumberInvalid = 1160,
     /// The country code is not valid.
@@ -71,7 +72,7 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
     
     /// The payment token is invalid. To perform this type of transaction a valid payment token is needed.
     OPPErrorCodePaymentTokenInvalid = 1180,
-    
+        
     /// Checkout info cannot be loaded.
     OPPErrorCodeCheckoutInfoCannotBeLoaded = 2000,
     /// There are no available payment methods in checkout.
@@ -82,6 +83,9 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
     OPPErrorCodeTransactionAborted = 2003,
     /// Brand validation rules cannot be loaded from.
     OPPErrorCodeBrandValidationCannotBeLoaded = 2004,
+    /// Checkout data cannot be loaded.
+    OPPErrorCodeCheckoutDataCannotBeLoaded = 2005,
+
     
     /// The transaction was declined. Please contact the system administrator of the merchant server to get the reason of failure.
     OPPErrorCodeTransactionProcessingFailure = 2010,
@@ -109,6 +113,27 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
     /// Vipps Link specific error.
     OPPErrorCodeVippsLink = 5003,
     
+    /// Afterpay Payments specific error.
+    OPPErrorCodeAfterPay = 5004,
+
+    /// Clearpay Payments specific error.
+    OPPErrorCodeClearPay = 5005,
+
+    /// Blik Payments specific error.
+    OPPErrorCodeBlik = 5006,
+    
+    /// CashAppPay Payments specific error.
+    OPPErrorCodeCashAppPay = 5007,
+    
+    /// Affirm Payments specific error.
+    OPPErrorCodeAffirm = 5008,
+    
+    /// AmazonPay Payments specific error.
+    OPPErrorCodeAmazonPay = 5009,
+    
+    /// MobilePay Link specific error.
+    OPPErrorCodeMobilePayLink = 5010,
+
     /// 3-D Secure 2 transaction error.
     OPPErrorCodeThreeDS2Failure = 6000,
     
@@ -116,8 +141,13 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
     OPPErrorCodeThreeDS2ChallengeCanceled = 6001,
     
     /// Card Scanning general error.
-    OPPErrorCodeCardScanningGeneralError = 7000
-
+    OPPErrorCodeCardScanningGeneralError = 7000,
+    
+    /// Copy and Pay web loading error.
+    OPPErrorCodeCopyAndPayGeneralError = 8000,
+    
+    /// Custom components validation general errror.
+    OPPErrorCodeCustomComponentGeneralError = 9000
 };
 
 /**
@@ -148,6 +178,7 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
  - 1000: Unsupported transaction payment params.
  - 1010: Transaction checkoud ID is not valid.
  - 1011: Brand doesn't match payment params class.
+ - 1012: Device authentication check for payment brand is failed.
  - 1090: The token identifier is invalid. Must be alpha-numeric string of length 32.
  - 1091: Tokenization is not supported for chosen payment brand.
 
@@ -171,6 +202,8 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
  
  ###Apple Pay errors:
  - 1150: The Apple Pay payment token data is invalid. To perform this type of transaction a valid payment token data is needed.
+ - 1151: The Apple Pay authorization rejected by merchant.
+ - 1152: Unable to send Apple pay request
  
  ###Transaction errors:
  - 2000: Checkout info cannot be loaded.
@@ -199,12 +232,36 @@ typedef NS_ENUM(NSInteger, OPPErrorCode) {
  ###Vipps errors:
  - 5003: Vipps specific error.
  
+ ###Afterpay errors:
+ - 5004: Afterpay specific error.
+ 
+ ###Clearpay errors:
+ - 5005: Clearpay specific error.
+ 
+ ###Blik errors:
+ - 5006: Blik specific error.
+ 
+ ###Cash App Pay errors:
+ - 5007: Cash App Pay specific error.
+ 
+ ###AmazonPay errors:
+ - 5009: AmazonPay specific error.
+ 
+ ###MobilePay errors:
+ - 5010: MobilePay specific error.
+ 
  ###3-D Secure 2 errors:
  - 6000: 3-D Secure 2 transaction error.
  - 6001: 3-D Secure 2 transaction was cancelled.
  
  ###Credit card number scanning error:
  - 7000: Card Scanning general error.
+ 
+ ###Copy and Pay web loading error:
+ - 8000: OPPErrorCodeCopyAndPayGeneralError.
+ 
+ ###Custom Components general error:
+ - 9000: OPPErrorCodeCustomComponentGeneralError.
  */
 
 @interface OPPErrors : NSObject

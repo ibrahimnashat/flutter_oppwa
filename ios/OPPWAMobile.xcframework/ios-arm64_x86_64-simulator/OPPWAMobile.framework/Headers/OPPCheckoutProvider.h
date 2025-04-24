@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 @import Foundation;
 @import PassKit;
@@ -152,5 +143,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)dismissCheckoutAnimated:(BOOL)animated completion: (void (^ __nullable)(void))completion;
 
+/// :nodoc:
+- (void)continueWithApplePayRequest:(nullable PKPaymentRequest *)applePayPaymentRequest
+                  completionHandler:(nonnull void (^)(void))completionHandler;
 @end
 NS_ASSUME_NONNULL_END

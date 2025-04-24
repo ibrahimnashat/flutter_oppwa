@@ -7,9 +7,7 @@
 "VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Selectează metoda de plată";
 "VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Detaliile plății";
 "VIEW_CONTROLLER_TITLE_PROCESSING" = "Procesare";
-
-/// Form titles
-"FORM_TITLE_PAYMENT_INFO" = "Informații despre plată";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "Adresa de facturare";
 
 /// Labels
 "LABEL_TOTAL_AMOUNT" = "Suma totală";
@@ -55,7 +53,11 @@
 "FIELD_LABEL_COUNTRY_CODE" = "Codul țării";
 "FIELD_LABEL_NATIONAL_IDENTIFIER" = "Numărul național de identificare";
 "FIELD_LABEL_ACCOUNT_NUMBER" = "Numărul contului";
+"FIELD_LABEL_ROUTING_NUMBER" = "Numărul de rutare";
 "FIELD_LABEL_ACCOUNT_VERIFICATION" = "Verificare cont";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Data de nastere";
+"FIELD_LABEL_OTP" = "Introdu codul din aplicația bancară";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Vă rugăm să introduceți codul dvs. Blik";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Numele care apare pe card";
@@ -73,6 +75,15 @@
 "FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "Numărul național de identificare";
 "FIELD_PLACEHOLDER_ACCOUNT_NUMBER" = "Numărul contului";
 "FIELD_PLACEHOLDER_ACCOUNT_VERIFICATION" = "Verificare cont";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "ZZ.LL.AAAA";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(Opțional)";
+"FIELD_PLACEHOLDER_COUNTRY" = "Țară";
+"FIELD_PLACEHOLDER_STATE" = "Stat";
+"FIELD_PLACEHOLDER_CITY" = "Oraș";
+"FIELD_PLACEHOLDER_POSTCODE" = "Zip / Cod Poştal";
+"FIELD_PLACEHOLDER_STREET1" = "Adresa Stradă Linia 1";
+"FIELD_PLACEHOLDER_STREET2" = "Adresa Stradă Linia 2";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Numărul de rutare";
 
 /// Text field errors
 "FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "Numele posesorului cardului este incorect";
@@ -89,8 +100,13 @@
 "FIELD_ERROR_MOBILE_PHONE_INVALID" = "Numărul de telefon nu este valabil";
 "FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "Numărul național de identificare nu este valabil";
 "FIELD_ERROR_ACCOUNT_NUMBER_INVALID" = "Numărul contului este incorect";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "Numărul de rutare nu este valid";
 "FIELD_ERROR_ACCOUNT_EXPIRY_DATE_INVALID" = "Data de expirare este incorectă, folosește formatul LL/AA sau LL/AAAA";
 "FIELD_ERROR_ACCOUNT_EXPIRED" = "Contul este expirat";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Dată de naștere invalidă. Se așteaptă ZZ.LL.AAAA";
+"FIELD_ERROR_ADDRESS_INVALID" = "Faceți clic aici pentru adresa de facturare";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Cod de țară invalid";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Introduceți un cod valid din 6 cifre";
 
 /// Payment method groups are displayed if tokens are received
 "PAYMENT_METHOD_GROUP_STORED" = "Metode de plată salvate";
@@ -100,3 +116,20 @@
 /// Payment method names
 "PAYMENT_METHOD_TYPE_DIRECTDEBIT_SEPA" = "SEPA Direct Debit";
 "PAYMENT_METHOD_TYPE_SOFORTUEBERWEISUNG" = "SOFORT BANKING";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Utilizați formatul LL/AA";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Utilizați codul din 3 sau 4 cifre";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "Data de expirare a cardului nu este validă, utilizați formatul LL/AA";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "Codul de securitate trebuie să conțină 3 sau 4 cifre";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Scanați un card";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "Anulați finalizarea plății";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Plătiți cu metoda de plată stocată";
+"ACCESSIBILITY_PAY_WITH" = "Plateste cu";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "Scanarea cardului a eșuat";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Țineți cardul aici.\și va scana automat";
+"BUTTON_TITLE_OK" = "Bine";

@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 #import "OPPPaymentParams.h"
 
@@ -22,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Initialization
 
 /// :nodoc:
-- (instancetype)initWithCheckoutID:(NSString *)checkoutID
-                      paymentBrand:(NSString *)paymentBrand
+- (nullable instancetype)initWithCheckoutID:(NSString *)checkoutID
+                      paymentBrand:(nullable NSString *)paymentBrand
                              error:(NSError * _Nullable __autoreleasing *)error NS_UNAVAILABLE;
 
 /**
@@ -42,7 +33,7 @@ Creates an object representing an Ikano private label transaction (as virtual ac
                                                             expiryMonth:(NSString *)expiryMonth
                                                              expiryYear:(NSString *)expiryYear
                                                     accountVerification:(nullable NSString *)accountVerification
-                                                                  error:(NSError **)error;
+                                                                  error:(NSError * _Nullable __autoreleasing *)error;
 
 /**
 Creates an object representing an Ikano private label transaction (as virtual account).
@@ -60,7 +51,7 @@ Creates an object representing an Ikano private label transaction (as virtual ac
                                 expiryMonth:(NSString *)expiryMonth
                                  expiryYear:(NSString *)expiryYear
                         accountVerification:(nullable NSString *)accountVerification
-                                      error:(NSError **)error NS_DESIGNATED_INITIALIZER;
+                                      error:(NSError * _Nullable __autoreleasing *)error NS_DESIGNATED_INITIALIZER;
 
 /// @name Properties
 

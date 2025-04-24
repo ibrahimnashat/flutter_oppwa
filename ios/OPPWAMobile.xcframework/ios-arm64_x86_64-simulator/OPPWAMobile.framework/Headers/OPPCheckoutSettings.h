@@ -1,19 +1,17 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 #import <Foundation/Foundation.h>
 #import <PassKit/PassKit.h>
 #import "OPPBillingAddress.h"
+#import "OPPViewController.h"
+@class OPPBrandConfig;
 @class OPPCheckoutTheme;
 @class OPPSecurityPolicy;
+@class OPPThreeDSConfig;
+@class OPPWpwlOptions;
+@class OPPMBWayConfig;
+@class OPPAfterpayConfig;
+@class OPPAmazonPayConfig;
 
 /// An enumeration for the possible store payment details modes.
 typedef NS_ENUM(NSInteger, OPPCheckoutStorePaymentDetailsMode) {
@@ -61,6 +59,14 @@ typedef NS_ENUM(NSInteger, OPPCheckoutBrandDetectionAppearanceStyle) {
     OPPCheckoutBrandDetectionAppearanceStyleNone
 };
 
+/// An enumeration for the ApplePay contact types
+typedef NS_OPTIONS(NSInteger, OPPCheckoutApplePayContactType) {
+    /// ApplePay billing contact type
+    OPPCheckoutApplePayContactTypeBillingAddress = 1,
+    /// ApplePay shipping contact type
+    OPPCheckoutApplePayContactTypeCustomer = 2
+};
+
 /**
  Class which encapsulates settings for the built-in in-App payment page. Use this to customize both the visual elements of the payment pages as well as functionality. This includes changing colors and texts, defining payment methods.
  */
@@ -85,7 +91,7 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, copy) NSArray<NSString *> *paymentBrands;
 
-/** 
+/**
  A constant that specifies the store payment details mode. Default is `OPPCheckoutStorePaymentDetailsModeNever`.
  */
 @property (nonatomic) OPPCheckoutStorePaymentDetailsMode storePaymentDetails;
@@ -111,7 +117,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, getter=isInstallmentEnabled) BOOL installmentEnabled;
 
 /**
- Set of security policies to confirm payment. 
+ Set of security policies to confirm payment.
  Increase security for tokens or specific payment methods with Touch ID/Face ID or passcode.
  */
 @property (nonatomic, copy, nullable) NSArray<OPPSecurityPolicy *> *securityPolicies;
@@ -125,6 +131,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** Encapsulates a request for payment, including information about payment processing capabilities and the payment amount. */
 @property (nonatomic, nullable) PKPaymentRequest *applePayPaymentRequest;
+
+/** Class that contains all possible settings used for additional configuration of the ipworks3ds_sdk. */
+@property (nonatomic, nullable) OPPThreeDSConfig *threeDSConfig;
 
 /** Sets the country to be used for Klarna checkout in ISO 3166-1 alpha-2 country identifier. By default, uses `countryCode` from device locale if supported. Otherwise, use `DE`. */
 @property (nonatomic, copy, nullable) NSString *klarnaCountry;
@@ -189,6 +198,89 @@ NS_ASSUME_NONNULL_BEGIN
  A flag that specifies whether payment brands order is used for tokens on payment method selection screen. Default is `NO`.
  */
 @property (nonatomic, getter=isPaymentBrandsOrderUsedForTokens) BOOL paymentBrandsOrderUsedForTokens;
+
+/**
+ A flag that enable/disable Show Date of Birth of Customer to be presented at the checkout is used for RatePay payment brand. Default is 'NO'.
+ */
+@property (nonatomic, getter=isShowBirthDateForRatePay) BOOL showBirthDateForRatePay;
+
+/**
+ A flag that enable/disable back button to be presented on the Payment Details. Default is 'YES'.
+ */
+@property (nonatomic, getter=isBackButtonAvailable) BOOL backButtonAvailable;
+
+/**
+A flag that enable/disable card scan button to be presented on the Payment Details. Default is 'YES'.
+*/
+@property (nonatomic, getter=isCardScanningEnabled) BOOL cardScanButtonAvailable;
+
+/**
+ A flag that is used to set the Apple Pay Button Type. Default is 'PKPaymentButtonTypePlain'.
+ */
+@property (nonatomic) PKPaymentButtonType applePayType;
+
+/**
+A flag that Disable's Card expiry date validation. Default is 'No'.
+*/
+@property (nonatomic) BOOL disableCardExpiryDateValidation;
+
+/**
+ WPWL Java Script options for CopyAndPay integration.
+ */
+@property (nonatomic, copy) NSDictionary<NSString *, OPPWpwlOptions *> *wpwlOptions;
+
+/**
+ Property which holds MBWay brand specific configuration.
+ */
+@property (nonatomic, copy) OPPMBWayConfig *mbwayConfig;
+
+/**
+A flag that enable/disable OTP field to be presented on the Payment Details for BLIK. Default is 'YES'.
+*/
+@property (nonatomic, getter=isShowOtpEnabled) BOOL showOtpEnabled;
+
+/**
+ The country for ACI Instant Pay payment method.
+ It should be one of these values NL, DE, FR, BE, LV, EE, LT, ES, AT, IT, PT, GB, US.
+ Default is 'US'.
+ */
+@property (nonatomic, copy) NSString *aciInstantPayCountry;
+
+/**
+ The configuration for AFTERPAY_PACIFIC payment method if it is set.
+ */
+@property (nonatomic, strong, nullable) OPPAfterpayConfig *afterpayConfig;
+
+/**
+ The configuration for AmazonPay payment method if it is set.
+ */
+@property (nonatomic, strong, nullable) OPPAmazonPayConfig *amazonPayConfig;
+
+/**
+The payment parameters for IDEAL 2.0 payment brand.
+ */
+@property (nonatomic, copy, nullable) NSString *idealBankAccountCountry;
+
+/**
+The bit mask holding Apple Pay contacts types.
+ */
+@property (nonatomic, assign) OPPCheckoutApplePayContactType applePayContactTypes;
+
+
+@property (nonatomic, copy) NSDictionary<OPPViewController, UIViewController *> *customControllers;
+
+/**
+ Configure view controllers for UI Component integration.
+ */
+- (BOOL)customController:(OPPViewController)controllerType withUiController:(nonnull UIViewController *)controller;
+
+/**
+ Set brand configuration
+ */
+- (void)setBrandConfig:(OPPBrandConfig *)brandConfig;
+
+/// :nodoc:
+- (nullable OPPBrandConfig*)getBrandConfig:(NSString *)brand;
 
 @end
 NS_ASSUME_NONNULL_END

@@ -7,9 +7,7 @@
 "VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Aukeratu ordaintzeko modua";
 "VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Ordainketaren xehetasunak";
 "VIEW_CONTROLLER_TITLE_PROCESSING" = "Tramitazioa";
-
-/// Form titles
-"FORM_TITLE_PAYMENT_INFO" = "Ordainketaren informazioa";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "Faktura helbidea";
 
 /// Labels
 "LABEL_TOTAL_AMOUNT" = "Guztira";
@@ -52,6 +50,10 @@
 "FIELD_LABEL_EMAIL" = "Helbide elektronikoa";
 "FIELD_LABEL_COUNTRY_CODE" = "Herrialde-kodea";
 "FIELD_LABEL_NATIONAL_IDENTIFIER" = "Identifikatzaile nazionala";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Jaioteguna";
+"FIELD_LABEL_ROUTING_NUMBER" = "bideratze zenbakia";
+"FIELD_LABEL_OTP" = "Sartu zure banku-aplikazioko kodea";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Mesedez, sartu zure Blik kodea";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Txartelean agertzen den izena";
@@ -67,6 +69,15 @@
 "FIELD_PLACEHOLDER_MOBILE_PHONE_NUMBER" = "xxxxxxxxx";
 "FIELD_PLACEHOLDER_EMAIL" = "Helbide elektronikoa";
 "FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "Identifikatzaile nazionala";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "DD.MM.YYYY";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(aukerakoa)";
+"FIELD_PLACEHOLDER_COUNTRY" = "Herrialdea";
+"FIELD_PLACEHOLDER_STATE" = "Estatu";
+"FIELD_PLACEHOLDER_CITY" = "Hiria";
+"FIELD_PLACEHOLDER_POSTCODE" = "Zip / Posta Kodea";
+"FIELD_PLACEHOLDER_STREET1" = "Helbidea 1. linea";
+"FIELD_PLACEHOLDER_STREET2" = "Helbidea 2. linea";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "bideratze zenbakia";
 
 /// Text field errors
 "FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "Txartela-titularraren izenak ez du balio";
@@ -82,6 +93,11 @@
 "FIELD_ERROR_EMAIL_INVALID" = "Helbide elektronikoak ez du balio";
 "FIELD_ERROR_MOBILE_PHONE_INVALID" = "Telefono zenbakiak ez du balio";
 "FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "Identifikatzaile nazionalak ez du balio";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Jaiotze data baliogabea. DD.MM.YYYY espero zen";
+"FIELD_ERROR_ADDRESS_INVALID" = "Egin klik hemen Fakturazio helbidea ikusteko";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Herrialde-kode baliogabea";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "Bideratze-zenbakia ez da baliozkoa";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Sartu 6 digituko baliozko kodea";
 
 /// Payment method groups are displayed if tokens are received
 "PAYMENT_METHOD_GROUP_STORED" = "Gordetako ordaintzeko moduak";
@@ -90,3 +106,20 @@
 
 /// Payment method names
 "PAYMENT_METHOD_TYPE_DIRECTDEBIT_SEPA" = "SEPA zordunketa zuzena";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Erabili MM/YY formatua";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Erabili 3 edo 4 digituko kodea";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "Txartelaren iraungitze data ez da baliozkoa, erabili MM/YY formatua";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "Segurtasun-kodeak 3 edo 4 zifra izan behar ditu";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Eskaneatu txartel bat";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "Utzi ordainketa egiteko";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Ordaindu gordetako ordainketa-metodoarekin";
+"ACCESSIBILITY_PAY_WITH" = "Ordaindu";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "Txartela eskaneatzea huts egin du";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Eutsi txartela hemen.\eta automatikoki eskaneatuko da";
+"BUTTON_TITLE_OK" = "Ados";

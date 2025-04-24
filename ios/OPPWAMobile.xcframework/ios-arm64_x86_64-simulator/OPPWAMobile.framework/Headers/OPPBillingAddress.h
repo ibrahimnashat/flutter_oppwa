@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 #import <Foundation/Foundation.h>
 
@@ -86,3 +77,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 NS_ASSUME_NONNULL_END
+
+/// :nodoc:
+@interface OPPBillingAddress()
+@property (nonatomic, copy, nullable, readwrite) NSString *country;
+@property (nonatomic, copy, nullable, readwrite) NSString *state;
+@property (nonatomic, copy, nullable, readwrite) NSString *city;
+@property (nonatomic, copy, nullable, readwrite) NSString *postCode;
+@property (nonatomic, copy, nullable, readwrite) NSString *street1;
+@property (nonatomic, copy, nullable, readwrite) NSString *street2;
+@end

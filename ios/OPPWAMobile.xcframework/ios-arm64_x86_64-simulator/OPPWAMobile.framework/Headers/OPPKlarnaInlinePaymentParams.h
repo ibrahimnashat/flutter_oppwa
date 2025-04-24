@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 #import "OPPPaymentParams.h"
 
@@ -28,8 +19,8 @@ Creates an object representing a Klarna Payments transaction.
 @return Returns an object representing a Klarna Payments transaction.
 */
 + (nullable instancetype)klarnaInlinePaymentParamsWithCheckoutID:(NSString *)checkoutID
-                                                    paymentBrand:(NSString *)paymentBrand
-                                                           error:(NSError **)error;
+                                                    paymentBrand:(nullable NSString *)paymentBrand
+                                                           error:(NSError * _Nullable __autoreleasing *)error;
 
 /**
  The id of the initial AD transaction (AD - account discovery). This parameter is required to submit PA transaction after shopper clicked Pay button.

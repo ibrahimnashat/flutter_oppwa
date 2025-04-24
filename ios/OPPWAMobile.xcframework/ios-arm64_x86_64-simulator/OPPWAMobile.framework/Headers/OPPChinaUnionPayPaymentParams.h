@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 #import "OPPPaymentParams.h"
 
@@ -21,7 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// @name Initialization
 
 /// :nodoc:
-- (instancetype)initWithCheckoutID:(NSString *)checkoutID paymentBrand:(NSString *)paymentBrand error:(NSError * _Nullable __autoreleasing *)error NS_UNAVAILABLE;
+- (nullable instancetype)initWithCheckoutID:(NSString *)checkoutID
+                      paymentBrand:(nullable NSString *)paymentBrand
+                             error:(NSError * _Nullable __autoreleasing *)error NS_UNAVAILABLE;
 
 /**
  Creates an object representing a China UnionPay transaction.
@@ -31,7 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param error The error that occurred while validating payment parameters. See code attribute (`OPPErrorCode`) and `NSLocalizedDescription` to identify the reason of failure.
  @return Returns an object representing a China UnionPay transaction.
  */
-+ (nullable instancetype)chinaUnionPayPaymentParamsWithCheckoutID:(NSString *)checkoutID holder:(nullable NSString *)holder error:(NSError **)error;
++ (nullable instancetype)chinaUnionPayPaymentParamsWithCheckoutID:(NSString *)checkoutID
+                                                           holder:(nullable NSString *)holder
+                                                            error:(NSError * _Nullable __autoreleasing *)error;
 
 /**
  Creates an object representing a China UnionPay transaction.
@@ -41,7 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
  @param error The error that occurred while validating payment parameters. See code attribute (`OPPErrorCode`) and `NSLocalizedDescription` to identify the reason of failure.
  @return Returns an object representing a China UnionPay transaction.
  */
-- (nullable instancetype)initWithCheckoutID:(NSString *)checkoutID holder:(nullable NSString *)holder error:(NSError **)error NS_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCheckoutID:(NSString *)checkoutID
+                                     holder:(nullable NSString *)holder
+                                      error:(NSError * _Nullable __autoreleasing *)error NS_DESIGNATED_INITIALIZER;
 
 /// @name Properties
 

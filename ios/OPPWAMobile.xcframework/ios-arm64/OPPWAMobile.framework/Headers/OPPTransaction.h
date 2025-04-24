@@ -1,13 +1,4 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 #import <Foundation/Foundation.h>
 @class OPPTransactionProcessor;
@@ -83,9 +74,27 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Dictionary for holding brand-specific parameters like:
- @see `OPPTransactionKlarnaInlineClientTokenKey`, `OPPTransactionKlarnaInlineClientCallbackUrlKey`, `OPPTransactionKlarnaInlineClientFailureCallbackUrlKey`, `OPPTransactionKlarnaInlineInitialTransactionIdKey`, `OPPTransactionAlipaySignedOrderInfoKey`.
+ @see `OPPTransactionKlarnaInlineClientTokenKey`, `OPPTransactionKlarnaInlineClientCallbackUrlKey`, `OPPTransactionKlarnaInlineClientFailureCallbackUrlKey`, `OPPTransactionKlarnaInlineInitialTransactionIdKey`
  */
 @property (nonatomic, readonly, nullable) NSDictionary<NSString *, NSString *> *brandSpecificInfo;
+
+/// :nodoc:
+- (void)updateTransactionType:(OPPTransactionType)type;
+
+/// :nodoc:
+- (void)updateThreeDSInfo:(nullable OPPThreeDS2Info*)info;
+
+/// :nodoc:
+- (void)updateYooKassaInfo:(nullable OPPYooKassaInfo*)info;
+
+/// :nodoc:
+- (void)updateBrandSpecificInfo:(nullable NSDictionary<NSString *, NSString *>*)info;
+
+/// :nodoc:
+- (void)updateMPGSTransactionFlag:(Boolean)flag;
+
+/// :nodoc:
+- (Boolean)getIsMPGSTransactionStatus;
 
 /**
 Constant for a key to get Klarna Payments client token value from the transaction response.
@@ -106,11 +115,6 @@ FOUNDATION_EXPORT NSString *const OPPTransactionKlarnaInlineClientFailureCallbac
 Constant for a key to get Klarna Payments initial transaction id from the transaction response.
 */
 FOUNDATION_EXPORT NSString *const OPPTransactionKlarnaInlineInitialTransactionIdKey;
-
-/**
-Constant for a key to get Alipay seller's order information which should be forwarded to Alipay native SDK.
-*/
-FOUNDATION_EXPORT NSString *const OPPTransactionAlipaySignedOrderInfoKey;
 
 /**
 Constant for a key to get Bancontact app scheme URL to redirect to the Bancontact app.
