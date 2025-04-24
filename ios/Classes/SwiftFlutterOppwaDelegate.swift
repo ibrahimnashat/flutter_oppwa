@@ -76,7 +76,7 @@ class SwiftFlutterOppwaDelegate: NSObject, OPPThreeDSEventListener, SFSafariView
                         
                     } else {
                         self.transaction = transaction
-                        self.result(SwiftFlutterOppwaUtils.toJson(transaction))
+                        self.presentURL(url: transaction.redirectURL!)
                     }
                 } else {
                     self.result(SwiftFlutterOppwaUtils.toJson(transaction))
