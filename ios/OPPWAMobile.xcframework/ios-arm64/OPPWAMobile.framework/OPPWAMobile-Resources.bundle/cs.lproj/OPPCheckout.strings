@@ -7,9 +7,7 @@
 "VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Vyberte platební metodu";
 "VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Údaje o platbě";
 "VIEW_CONTROLLER_TITLE_PROCESSING" = "Zpracovávám";
-
-/// Form titles
-"FORM_TITLE_PAYMENT_INFO" = "Informace o platbě";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "fakturační adresa";
 
 /// Labels
 "LABEL_TOTAL_AMOUNT" = "Celková částka";
@@ -55,7 +53,11 @@
 "FIELD_LABEL_COUNTRY_CODE" = "Kód země";
 "FIELD_LABEL_NATIONAL_IDENTIFIER" = "Osobní identifikační číslo";
 "FIELD_LABEL_ACCOUNT_NUMBER" = "Číslo účtu";
+"FIELD_LABEL_ROUTING_NUMBER" = "Směrovací číslo";
 "FIELD_LABEL_ACCOUNT_VERIFICATION" = "Ověření účtu";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Datum narození";
+"FIELD_LABEL_OTP" = "Zadejte kód ze své bankovní aplikace";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Zadejte prosím svůj Blik kód";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Jméno, jak je uvedeno na kartě";
@@ -73,6 +75,15 @@
 "FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "Osobní identifikační číslo";
 "FIELD_PLACEHOLDER_ACCOUNT_NUMBER" = "Číslo účtu";
 "FIELD_PLACEHOLDER_ACCOUNT_VERIFICATION" = "Ověření účtu";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "DD.MM.RRRR";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(Volitelné)";
+"FIELD_PLACEHOLDER_COUNTRY" = "Země";
+"FIELD_PLACEHOLDER_STATE" = "Stát";
+"FIELD_PLACEHOLDER_CITY" = "Město";
+"FIELD_PLACEHOLDER_POSTCODE" = "PSČ";
+"FIELD_PLACEHOLDER_STREET1" = "1. řádek adresy";
+"FIELD_PLACEHOLDER_STREET2" = "2. řádek adresy";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Směrovací číslo";
 
 /// Text field errors
 "FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "Neplatné jméno majitele karty";
@@ -89,8 +100,13 @@
 "FIELD_ERROR_MOBILE_PHONE_INVALID" = "Neplatné číslo mobilního telefonu";
 "FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "Neplatné osobní identifikační číslo";
 "FIELD_ERROR_ACCOUNT_NUMBER_INVALID" = "Neplatné číslo účtu";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "Směrové číslo není platné";
 "FIELD_ERROR_ACCOUNT_EXPIRY_DATE_INVALID" = "Datum vypršení platnosti není platné, použijte formát MM/RR nebo MM/RRRR";
 "FIELD_ERROR_ACCOUNT_EXPIRED" = "Platnost účtu vypršela";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Neplatné datum narození. Očekává se DD.MM.RRRR";
+"FIELD_ERROR_ADDRESS_INVALID" = "Kliknutím sem zobrazíte fakturační adresu";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Neplatný kód země";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Zadejte 6místný platný kód";
 
 /// Payment method groups are displayed if tokens are received
 "PAYMENT_METHOD_GROUP_STORED" = "Uložené platební metody";
@@ -100,3 +116,20 @@
 /// Payment method names
 "PAYMENT_METHOD_TYPE_DIRECTDEBIT_SEPA" = "SEPA Direct Debit";
 "PAYMENT_METHOD_TYPE_SOFORTUEBERWEISUNG" = "SOFORT banking";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Použijte formát MM/RR";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Použijte 3 nebo 4místný kód";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "Datum vypršení platnosti karty není platné, použijte formát MM/RR";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "Bezpečnostní kód musí obsahovat 3 nebo 4 číslice";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Naskenujte kartu";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "Zrušit pokladnu";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Plaťte uloženou platební metodou";
+"ACCESSIBILITY_PAY_WITH" = "Platit";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "Skenování karty se nezdařilo";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Zde podržte kartu.\a automaticky se naskenuje";
+"BUTTON_TITLE_OK" = "OK";

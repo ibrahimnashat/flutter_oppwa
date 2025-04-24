@@ -1,17 +1,21 @@
-//
-// Copyright (c) $$year$$ by ACI Worldwide, Inc.
-// All rights reserved.
-//
-// This software is the confidential and proprietary information
-// of ACI Worldwide Inc ("Confidential Information"). You shall
-// not disclose such Confidential Information and shall use it
-// only in accordance with the terms of the license agreement
-// you entered with ACI Worldwide Inc.
-//
+//  © Copyright ACI Worldwide, Inc. 2018, 2025
 
 @import Foundation;
+@class OPPThreeDSSchemeConfig;
 
 NS_ASSUME_NONNULL_BEGIN
+
+/// An enumeration of possible 3-D Secure 2 flows.
+typedef NS_ENUM(NSInteger, OPPThreeDS2Flow) {
+    /// 3-D Secure 2 native application flow.
+    OPPThreeDS2FlowApp,
+    /// 3-D Secure 2 native application flow with fallback to browsed flow disabled
+    OPPThreeDS2FlowAppOnly,
+    /// 3-D Secure 2 native browser flow.
+    OPPThreeDS2FlowWeb,
+    /// Fallback to  3-D Secure 1 flow.
+    OPPThreeDS2FlowDisabled
+};
 
 /// Enumeration of possible statuses for 3-D Secure 2 authentication.
 typedef NS_ENUM(NSInteger, OPPThreeDS2Status) {
@@ -52,6 +56,22 @@ typedef NS_ENUM(NSInteger, OPPThreeDS2Status) {
 @interface OPPThreeDS2Info : NSObject
 
 /**
+ Protocol version of 3-D Secure 2.
+ */
+/// TODO:- Needs to make it readonly again
+@property (nonatomic, copy, readwrite, nullable) NSString *protocolVersion;
+
+/**
+ 3-D Secure 2 integration flow.
+ */
+@property (nonatomic, readonly) OPPThreeDS2Flow threeDSFlow;
+
+/**
+ Class to represent all information needed to communicate securely with Directory Server (DS) and Access Control Server (ACS).
+*/
+@property (nonatomic, readonly, nullable) OPPThreeDSSchemeConfig *schemeConfig;
+
+/**
  Status of 3-D Secure 2 authentication.
  */
 @property (nonatomic, readonly) OPPThreeDS2Status authStatus;
@@ -62,24 +82,27 @@ typedef NS_ENUM(NSInteger, OPPThreeDS2Status) {
 @property (nonatomic, copy, readonly, nullable) NSString *authResponse;
 
 /**
- Protocol version of 3-D Secure 2.
- */
-@property (nonatomic, copy, readonly, nullable) NSString *protocolVersion;
-
-/**
  The callback URL string to send the params needed for 3-D Secure 2 authentication request.
  */
-@property (nonatomic, copy, readonly, nullable) NSString *callbackURL;
+/// TODO:- Needs to make it readonly again
+@property (nonatomic, copy, readwrite, nullable) NSString *callbackURL;
 
 /**
  The challenge completion callback URL string to inform Mastercard Payment Gateway Services that the challenge has been completed.
  */
-@property (nonatomic, copy, readonly, nullable) NSString *challengeCompletionCallbackUrl;
+/// TODO:- Needs to make it readonly again
+@property (nonatomic, copy, readwrite, nullable) NSString *challengeCompletionCallbackUrl;
 
 /**
  Text provided by the ACS/Issuer to Cardholder during a Frictionless or Decoupled transaction.
  */
-@property (nonatomic, copy, readonly, nullable) NSString *cardHolderInfo;
+/// TODO:- Needs to make it readonly again
+@property (nonatomic, copy, readwrite, nullable) NSString *cardHolderInfo;
+
+/// @name Initialization
+
+/// :nodoc:
+- (instancetype)init NS_UNAVAILABLE;
 
 /**
  Creates 3DS info object with the provided status and authentication response.
@@ -99,14 +122,26 @@ typedef NS_ENUM(NSInteger, OPPThreeDS2Status) {
 + (nullable instancetype)threeDS2InfoWithAuthStatus:(OPPThreeDS2Status)authStatus
                                        authResponse:(nullable NSString *)authResponse;
 
-/// :nodoc:
-- (instancetype)init NS_UNAVAILABLE;
-
 /**
  Returns `YES` if in-app challenge is required, otherwise `NO`.
  @return `YES` if in-app challenge is required, otherwise `NO`.
  */
 - (BOOL)isChallengeRequired;
+
+/// :nodoc:
+- (void)updateThreeDSFlow:(OPPThreeDS2Flow)flow;
+
+/// :nodoc:
+- (void)updateThreeDSConfig:(nullable OPPThreeDSSchemeConfig*)config;
+
+/// :nodoc:
+- (void)updateAuthStatus:(OPPThreeDS2Status)authStatus;
+
+/// :nodoc:
+- (void)updateAuthResponse:(nullable NSString*)authResponse;
+
+/// :nodoc:
++ (OPPThreeDS2Status)authStatusFromString:(nonnull NSString *)statusString;
 
 @end
 

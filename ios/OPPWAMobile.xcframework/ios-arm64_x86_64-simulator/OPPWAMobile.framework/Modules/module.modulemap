@@ -1,7 +1,7 @@
 framework module OPPWAMobile {
   umbrella header "OPPWAMobile.h"
-
   export *
+
   module * { export * }
 }
 

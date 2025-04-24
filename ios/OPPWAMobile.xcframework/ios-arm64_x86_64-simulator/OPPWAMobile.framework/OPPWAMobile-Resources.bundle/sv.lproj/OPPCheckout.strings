@@ -7,9 +7,7 @@
 "VIEW_CONTROLLER_TITLE_PAYMENT_METHOD_SELECTION" = "Välj betalningsmetod";
 "VIEW_CONTROLLER_TITLE_PAYMENT_DETAILS" = "Betalningsuppgifter";
 "VIEW_CONTROLLER_TITLE_PROCESSING" = "Bearbetas";
-
-/// Form titles
-"FORM_TITLE_PAYMENT_INFO" = "Betalningsinformation";
+"VIEW_CONTROLLER_TITLE_ADDRESS" = "Fakturaadress";
 
 /// Labels
 "LABEL_TOTAL_AMOUNT" = "Totala summa";
@@ -54,8 +52,12 @@
 "FIELD_LABEL_COUNTRY_CODE" = "Landskod";
 "FIELD_LABEL_NATIONAL_IDENTIFIER" = "Personnummer";
 "FIELD_LABEL_ACCOUNT_NUMBER" = "Kontonummer";
+"FIELD_LABEL_ROUTING_NUMBER" = "Rutenummer";
 "FIELD_LABEL_ACCOUNT_VERIFICATION" = "Kontoverifiering";
 "FIELD_LABEL_QRCODE" = "QR kod";
+"FIELD_LABEL_DATE_OF_BIRTH" = "Födelsedatum";
+"FIELD_LABEL_OTP" = "Ange koden från din bankansökan";
+"FIELD_LABEL_BLIK_ACCESSIBILITY" = "Ange din Blik-kod";
 
 /// Text field placeholders
 "FIELD_PLACEHOLDER_CARD_HOLDER_NAME" = "Namn som det framgår på kortet";
@@ -73,6 +75,15 @@
 "FIELD_PLACEHOLDER_NATIONAL_IDENTIFIER" = "Personnummer";
 "FIELD_PLACEHOLDER_ACCOUNT_NUMBER" = "Kontonummer";
 "FIELD_PLACEHOLDER_ACCOUNT_VERIFICATION" = "Kontoverifiering";
+"FIELD_PLACEHOLDER_DATE_OF_BIRTH" = "DD.MM.ÅÅÅÅ";
+"FIELD_PLACEHOLDER_OPTIONAL" = "(valfritt)";
+"FIELD_PLACEHOLDER_COUNTRY" = "Land";
+"FIELD_PLACEHOLDER_STATE" = "stat";
+"FIELD_PLACEHOLDER_CITY" = "Stad";
+"FIELD_PLACEHOLDER_POSTCODE" = "Postnummer";
+"FIELD_PLACEHOLDER_STREET1" = "Gatuadress linje 1";
+"FIELD_PLACEHOLDER_STREET2" = "Gatuadress linje 2";
+"FIELD_PLACEHOLDER_ROUTING_NUMBER" = "Rutenummer";
 
 /// Text field errors
 "FIELD_ERROR_CARD_HOLDER_NAME_INVALID" = "Kortinnehavarens namn är inte giltigt";
@@ -89,8 +100,13 @@
 "FIELD_ERROR_MOBILE_PHONE_INVALID" = "Ogilitigt mobilnummer";
 "FIELD_ERROR_NATIONAL_IDENTIFIER_INVALID" = "Inkorrekt personnummer";
 "FIELD_ERROR_ACCOUNT_NUMBER_INVALID" = "Felaktikt kontonummer";
+"FIELD_ERROR_ROUTING_NUMBER_INVALID" = "Routingnummer är inte giltigt";
 "FIELD_ERROR_ACCOUNT_EXPIRY_DATE_INVALID" = "Utgångsdatumet stämmer inte. Använd formatet MM/ÅÅ eller MM/ÅÅÅÅ";
 "FIELD_ERROR_ACCOUNT_EXPIRED" = "Kontot har utgått";
+"FIELD_ERROR_DATE_OF_BIRTH_INVALID" = "Ogiltigt födelsedatum. DD.MM.ÅÅÅÅ förväntas";
+"FIELD_ERROR_ADDRESS_INVALID" = "Klicka här för faktureringsadress";
+"FIELD_ERROR_COUNTY_CODE_INVALID" = "Ogiltig landskod";
+"FIELD_ERROR_BANK_CODE_INVALID" = "Ange 6-siffrig giltig kod";
 
 /// Payment method groups are displayed if tokens are received
 "PAYMENT_METHOD_GROUP_STORED" = "Sparade betalningsmetoder";
@@ -101,3 +117,21 @@
 /// Payment method names
 "PAYMENT_METHOD_TYPE_KLARNA_PAYMENTS_SLICEIT" = "Dela upp.";
 "PAYMENT_METHOD_TYPE_KLARNA_PAYMENTS_PAYNOW" = "Bankkonto";
+"PAYMENT_METHOD_TYPE_KLARNA_PAYMENTS_ONE" = "Paga con Klarna";
+
+/// Copy and Pay WebView
+"FIELD_PLACEHOLDER_EXPIRY_DATE_WEB" = "Använd formatet MM/ÅÅ";
+"FIELD_PLACEHOLDER_CVV_WEB" = "Använd 3- eller 4-siffrig kod";
+"FIELD_ERROR_CARD_EXPIRY_DATE_INVALID_WEB" = "Kortets utgångsdatum är inte giltigt, använd formatet MM/ÅÅ";
+"FIELD_ERROR_CARD_CVV_INVALID_WEB" = "Säkerhetskoden måste innehålla 3 eller 4 siffror";
+
+/// Accessibility
+"ACCESSIBILITY_SCAN_CARD" = "Skanna ett kort";
+"ACCESSIBILITY_CANCEL_CHECKOUT" = "Avbryt kassan";
+"ACCESSIBILITY_PAY_WITH_STORED_PAYMENT_METHOD" = "Betala med lagrad betalningsmetod";
+"ACCESSIBILITY_PAY_WITH" = "Betala med";
+
+/// Card Scanning
+"ALERT_TITLE_CARD_SCANNING_FAILED" = "Kortskanning misslyckades";
+"LABEL_CARD_SCAN_HOLD_HERE" = "Håll kortet här.\och det kommer att skannas automatiskt";
+"BUTTON_TITLE_OK" = "OK";
