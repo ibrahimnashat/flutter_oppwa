@@ -22,7 +22,10 @@ A new flutter plugin project.
   s.swift_version = '5.0'
 
   s.ios.deployment_target = '10.0'
-  s.pod_target_xcconfig    = { 'OTHER_LDFLAGS' => '-framework OPPWAMobile -framework ipworks3ds_sdk' }
+  s.pod_target_xcconfig = {
+    'OTHER_LDFLAGS' => '-framework OPPWAMobile -framework ipworks3ds_sdk',
+    'ENABLE_BITCODE' => 'NO'
+  }
   s.preserve_paths = 'OPPWAMobile.xcframework', 'ipworks3ds_sdk'
   s.vendored_frameworks = 'OPPWAMobile.xcframework', 'ipworks3ds_sdk.xcframework'
   s.static_framework = true
