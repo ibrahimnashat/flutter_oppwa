@@ -18,15 +18,12 @@ A new flutter plugin project.
   s.platform = :ios, '10.0'
 
   # Flutter.framework does not contain a i386 slice.
-  s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
+  s.pod_target_xcconfig = {'ENABLE_BITCODE' => 'NO', 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
   s.swift_version = '5.0'
 
   s.ios.deployment_target = '10.0'
-  s.pod_target_xcconfig = {
-    'OTHER_LDFLAGS' => '-framework OPPWAMobile -framework ipworks3ds_sdk',
-    'ENABLE_BITCODE' => 'NO'
-  }
+  s.pod_target_xcconfig = {'OTHER_LDFLAGS' => '-framework OPPWAMobile -framework ipworks3ds_sdk'}
   s.preserve_paths = 'OPPWAMobile.xcframework', 'ipworks3ds_sdk'
   s.vendored_frameworks = 'OPPWAMobile.xcframework', 'ipworks3ds_sdk.xcframework'
-  s.static_framework = true
+  s.static_framework = false
 end
